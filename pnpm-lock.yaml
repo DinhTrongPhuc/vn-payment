@@ -17,6 +17,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.0.0
         version: 7.18.0(eslint@9.39.4)(typescript@5.9.3)
+      '@vn-payment/momo':
+        specifier: workspace:*
+        version: link:packages/momo
       eslint:
         specifier: ^9.0.0
         version: 9.39.4
