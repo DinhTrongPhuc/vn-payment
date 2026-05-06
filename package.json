@@ -1,0 +1,19 @@
+{
+  "name": "vn-payment",
+  "private": true,
+  "description": "Unified payment adapter for Vietnam payment gateways (MoMo, VNPay, ZaloPay)",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "eslint packages/**/src/**/*.ts",
+    "typecheck": "pnpm -r run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0"
+  }
+}
