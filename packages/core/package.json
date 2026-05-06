@@ -1,0 +1,25 @@
+{
+  "name": "@vn-payment/core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Core interfaces, types and utilities for vn-payment",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": ["payment", "vietnam", "momo", "vnpay", "zalopay"],
+  "license": "MIT"
+}

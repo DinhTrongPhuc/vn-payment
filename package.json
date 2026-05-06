@@ -1,6 +1,7 @@
 {
   "name": "vn-payment",
   "private": true,
+  "type": "module",
   "description": "Unified payment adapter for Vietnam payment gateways (MoMo, VNPay, ZaloPay)",
   "scripts": {
     "build": "pnpm -r run build",
