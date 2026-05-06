@@ -28,7 +28,7 @@ const refund  = await payment.refund({ ... });
 | `@vn-payment/core`    | `0.1.0` | Shared types, interfaces, error classes |
 | `@vn-payment/momo`    | `0.1.0` | MoMo adapter                            |
 | `@vn-payment/vnpay`   | `0.1.0` | VNPay adapter _(coming soon)_           |
-| `@vn-payment/zalopay` | `0.1.0` | ZaloPay adapter _(coming soon)_         |
+| `@vn-payment/zalopay` | `0.1.0` | ZaloPay adapter                         |
 
 ## Installation
 
@@ -70,7 +70,7 @@ if (result.status === "success") {
 - [x] `@vn-payment/core` — types & interfaces
 - [x] `@vn-payment/momo` — MoMo adapter (HMAC-SHA256)
 - [ ] `@vn-payment/vnpay` — VNPay adapter (HMAC-SHA512)
-- [ ] `@vn-payment/zalopay` — ZaloPay adapter (HMAC-SHA256)
+- [x] `@vn-payment/zalopay` — ZaloPay adapter (HMAC-SHA256)
 - [ ] Test helpers & mock adapters
 - [ ] Docs site
 
