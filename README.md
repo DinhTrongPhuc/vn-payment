@@ -54,7 +54,7 @@ const { paymentUrl } = await momo.createOrder({
   orderId: "ORDER_001",
   amount: 50000,
   description: "Thanh toán đơn hàng #001",
-  redirectUrl: "https://yourapp.com/payment/return",
+  redirectUrl: "https://yourapp.com/pay-ment/return",
   ipnUrl: "https://yourapp.com/payment/webhook",
 });
 
