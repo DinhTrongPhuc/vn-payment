@@ -27,8 +27,8 @@ const refund  = await payment.refund({ ... });
 | --------------------- | ------- | --------------------------------------- |
 | `@vn-payment/core`    | `0.1.0` | Shared types, interfaces, error classes |
 | `@vn-payment/momo`    | `0.1.0` | MoMo adapter                            |
-| `@vn-payment/vnpay`   | `0.1.0` | VNPay adapter                           |
-| `@vn-payment/zalopay` | `0.1.0` | ZaloPay adapter                         |
+| `@vn-payment/vnpay`   | `0.1.1` | VNPay adapter                           |
+| `@vn-payment/zalopay` | `0.1.1` | ZaloPay adapter                         |
 
 ## Installation
 
