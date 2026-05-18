@@ -2,7 +2,7 @@
 // Provider identifier
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type PaymentProvider = "momo" | "vnpay" | "zalopay";
+export type PaymentProvider = "momo" | "vnpay" | "zalopay" | "mock";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Shared input types

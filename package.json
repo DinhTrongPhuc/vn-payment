@@ -7,15 +7,20 @@
     "build": "pnpm -r run build",
     "test": "pnpm -r run test",
     "lint": "eslint packages/**/src/**/*.ts",
-    "typecheck": "pnpm -r run typecheck"
+    "typecheck": "pnpm -r run typecheck",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.4.0",
-    "vitest": "^1.6.0",
-    "eslint": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
-    "@vn-payment/momo": "workspace:*"
+    "@vn-payment/momo": "workspace:*",
+    "@vn-payment/vnpay": "workspace:*",
+    "@vn-payment/zalopay": "workspace:*",
+    "eslint": "^9.0.0",
+    "typescript": "^5.4.0",
+    "vitepress": "^1.6.4",
+    "vitest": "^1.6.0"
   }
 }
