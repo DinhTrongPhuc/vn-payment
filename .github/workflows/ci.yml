@@ -32,11 +32,11 @@ jobs:
         run: pnpm run lint
         continue-on-error: true # Optional: change to false if you want lint to block builds
 
+      - name: Build packages
+        run: pnpm run build
+
       - name: Type check
         run: pnpm run typecheck
 
       - name: Run unit tests
         run: pnpm run test
-
-      - name: Build packages
-        run: pnpm run build
