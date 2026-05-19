@@ -1,6 +1,6 @@
 {
   "name": "@vn-payment/mock",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "Mock payment adapter for testing vn-payment flows locally",
   "main": "./dist/index.js",

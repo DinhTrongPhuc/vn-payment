@@ -29,7 +29,7 @@ const refund  = await payment.refund({ ... });
 | `@vn-payment/momo`    | `0.2.0` | MoMo adapter                            |
 | `@vn-payment/vnpay`   | `0.2.0` | VNPay adapter                           |
 | `@vn-payment/zalopay` | `0.2.0` | ZaloPay adapter                         |
-| `@vn-payment/mock`    | `0.1.0` | Mock adapter for local testing          |
+| `@vn-payment/mock`    | `0.2.1` | Mock adapter for local testing          |
 
 ## Installation
 

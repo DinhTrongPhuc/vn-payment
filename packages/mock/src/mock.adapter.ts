@@ -14,6 +14,8 @@ import {
 export interface MockAdapterConfig {
   /** Should the adapter simulate success or failure? Default is "success" */
   simulateMode?: "success" | "failure";
+  /** Simulate network latency (in milliseconds) */
+  simulateLatencyMs?: number;
 }
 
 export class MockAdapter implements IPaymentProvider {
@@ -24,7 +26,14 @@ export class MockAdapter implements IPaymentProvider {
     this.config = config;
   }
 
+  private async delay(): Promise<void> {
+    if (this.config.simulateLatencyMs) {
+      await new Promise(resolve => setTimeout(resolve, this.config.simulateLatencyMs));
+    }
+  }
+
   async createOrder(input: CreateOrderInput): Promise<CreateOrderResult> {
+    await this.delay();
     if (input.amount <= 0) {
       throw new InvalidInputError("amount must be greater than 0.");
     }
@@ -40,6 +49,7 @@ export class MockAdapter implements IPaymentProvider {
   }
 
   async verifyWebhook(input: VerifyWebhookInput): Promise<VerifyWebhookResult> {
+    await this.delay();
     const rawBody = input.rawBody as any;
     
     if (!rawBody || !rawBody.orderId) {
@@ -60,6 +70,7 @@ export class MockAdapter implements IPaymentProvider {
   }
 
   async refund(input: RefundInput): Promise<RefundResult> {
+    await this.delay();
     const isSuccess = this.config.simulateMode === "success";
     return {
       success: isSuccess,
@@ -70,6 +81,7 @@ export class MockAdapter implements IPaymentProvider {
   }
 
   async queryTransaction(input: QueryTransactionInput): Promise<QueryTransactionResult> {
+    await this.delay();
     const isSuccess = this.config.simulateMode === "success";
     return {
       status: isSuccess ? "success" : "failed",
